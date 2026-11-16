@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Gestión de servicios (terminal)",
+            "request": "launch",
+            "mainClass": "com.barberiacortes.servicios.Principal",
+            "console": "integratedTerminal",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Probar conexión JDBC",
+            "request": "launch",
+            "mainClass": "com.barberiacortes.servicios.PruebaConexion",
+            "console": "integratedTerminal",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ] 
+}
