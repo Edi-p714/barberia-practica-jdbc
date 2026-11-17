@@ -6,9 +6,10 @@
 
     <groupId>com.barberiacortes</groupId>
     <artifactId>barberia-practica-jdbc</artifactId>
-    <version>1.0.0</version>
-    <name>Gestión de servicios - Barbería Cortes (JDBC)</name>
-    <description>Módulo CRUD de la tabla servicios del Sistema de Gestión para Barbería, con Java, JDBC y MySQL.</description>
+    <version>2.0.0</version>
+    <packaging>war</packaging>
+    <name>Gestión de servicios - Barbería Cortes (JDBC, Servlets y JSP)</name>
+    <description>Módulo CRUD de la tabla servicios del Sistema de Gestión para Barbería, con Java, JDBC, Servlets, JSP y MySQL.</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -16,20 +17,34 @@
     </properties>
 
     <dependencies>
-        <!-- Controlador JDBC de MySQL (Connector/J) -->
+        <!-- Controlador JDBC de MySQL (Connector/J): viaja dentro del WAR -->
         <dependency>
             <groupId>com.mysql</groupId>
             <artifactId>mysql-connector-j</artifactId>
             <version>9.5.0</version>
         </dependency>
+
+        <dependency>
+            <groupId>jakarta.servlet</groupId>
+            <artifactId>jakarta.servlet-api</artifactId>
+            <version>6.0.0</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
     <build>
+        <!-- El WAR se llama barberia-practica-jdbc.war; esa es también su ruta en Tomcat -->
+        <finalName>barberia-practica-jdbc</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.14.1</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.4.0</version>
             </plugin>
         </plugins>
     </build>
