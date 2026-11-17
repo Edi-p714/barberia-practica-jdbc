@@ -1,0 +1,209 @@
+/* Colores del sistema de diseño del proyecto (tema oscuro, contraste WCAG AA). */
+:root {
+    --fondo: #121826;
+    --panel: #191F2D;
+    --campo: #0E131F;
+    --texto: #EEEFF3;
+    --texto-secundario: #B6BAC5;
+    --acento: #FBE496;
+    --texto-sobre-acento: #121826;
+    --borde: #2A3142;
+    --inactivo: #6B7182;
+    --exito: #7FE3B0;
+    --error: #FFAFA9;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--fondo);
+    color: var(--texto);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+a {
+    color: var(--acento);
+}
+
+.cabecera {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 12px;
+    padding: 16px 32px;
+    background: var(--panel);
+    border-bottom: 1px solid var(--borde);
+}
+
+.marca {
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.subtitulo {
+    color: var(--texto-secundario);
+    font-size: 14px;
+}
+
+.contenido {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px 32px;
+}
+
+.titulo-seccion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.boton {
+    display: inline-block;
+    min-height: 44px;
+    padding: 10px 18px;
+    border: 1px solid var(--acento);
+    border-radius: 10px;
+    background: var(--acento);
+    color: var(--texto-sobre-acento);
+    font: inherit;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.boton-secundario {
+    background: transparent;
+    color: var(--acento);
+}
+
+.aviso {
+    padding: 12px 16px;
+    border-radius: 10px;
+    border: 1px solid;
+}
+
+.aviso-exito {
+    border-color: var(--exito);
+    color: var(--exito);
+}
+
+.aviso-error {
+    border-color: var(--error);
+    color: var(--error);
+}
+
+.buscador {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin: 16px 0 24px;
+}
+
+input,
+textarea {
+    min-height: 44px;
+    padding: 10px 12px;
+    border: 1px solid var(--inactivo);
+    border-radius: 10px;
+    background: var(--campo);
+    color: var(--texto);
+    font: inherit;
+}
+
+input:focus,
+textarea:focus {
+    outline: 2px solid var(--acento);
+}
+
+.tabla {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--panel);
+}
+
+.tabla th,
+.tabla td {
+    padding: 12px;
+    border-bottom: 1px solid var(--borde);
+    text-align: left;
+    vertical-align: top;
+}
+
+.tabla th {
+    color: var(--texto-secundario);
+    font-size: 14px;
+}
+
+.estado-activo {
+    color: var(--exito);
+}
+
+.estado-inactivo {
+    color: var(--texto-secundario);
+}
+
+.acciones {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.acciones form {
+    margin: 0;
+}
+
+.enlace-peligro {
+    padding: 0;
+    border: 0;
+    background: none;
+    color: var(--error);
+    font: inherit;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.total {
+    color: var(--texto-secundario);
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 520px;
+}
+
+.formulario label {
+    margin-top: 8px;
+}
+
+.opcional {
+    color: var(--texto-secundario);
+    font-size: 14px;
+}
+
+.casilla {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.casilla input {
+    min-height: auto;
+    width: 20px;
+    height: 20px;
+}
+
+.botones {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+}

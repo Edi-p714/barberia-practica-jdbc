@@ -1,0 +1,8 @@
+<%@ page pageEncoding="UTF-8" %>
+<%-- Fragmento común: se incorpora en cada vista con la directiva include.
+     Declara su propia codificación: sin ella, Tomcat lee los fragmentos .jspf
+     como ISO-8859-1 y las tildes se dañan. --%>
+<header class="cabecera">
+    <a class="marca" href="<%= request.getContextPath() %>/servicios">Barbería Cortes</a>
+    <span class="subtitulo">Gestión de servicios · práctica JDBC con Servlets y JSP</span>
+</header>
