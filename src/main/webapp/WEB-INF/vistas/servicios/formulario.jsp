@@ -20,7 +20,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= es Edicion ? "Editar servicio" : "Registrar servicio" %> · Barbería Cortes</title>
+    <title><%= esEdicion ? "Editar servicio" : "Registrar servicio" %> · Barbería Cortes</title>
     <link rel="stylesheet" href="<%= request.getContextPath() %>/css/estilos.css">
 </head>
 <body>
